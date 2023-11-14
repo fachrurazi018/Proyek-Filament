@@ -40,11 +40,13 @@ class UmkmResource extends Resource
                     'Jasa' => 'Jasa',
                     'Industri Kreatif' => 'Industri Kreatif'
                 ]),
-                MarkdownEditor::make('alamat'),
-                TextInput::make('no_telpon'),
-                TextInput::make('media_promosi')->placeholder('Nama instagram Anda (menggunakan @)'),
-                TextInput::make('produk_unggulan'),
-                FileUpload::make('gambar')
+                MarkdownEditor::make('alamat')->required(),
+                TextInput::make('no_telpon')->required(),
+                TextInput::make('media_promosi')
+                ->required()
+                ->placeholder('Nama instagram Anda (menggunakan @)'),
+                TextInput::make('produk_unggulan')->required(),
+                FileUpload::make('gambar')->required(),
             ]);
     }
 

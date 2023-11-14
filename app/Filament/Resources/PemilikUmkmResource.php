@@ -25,7 +25,7 @@ class PemilikUmkmResource extends Resource
     {
         return $form
             ->schema([
-                TextInput::make('nama')
+                TextInput::make('nama')->required(),
             ]);
     }
 
