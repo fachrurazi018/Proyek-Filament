@@ -16,8 +16,8 @@ class DashboardController extends Controller
         return view('user.dashboard',compact('pemiliks','umkm','kegiatan'));
     }  
 
-    public function show(){
-        $umkm = Umkm::with('pemilik_umkm')->get();
+    public function show(Umkm $umkm){
+        $umkm->load('pemilik_umkm');
         return view('user.detail', compact('umkm'));
     }
 }

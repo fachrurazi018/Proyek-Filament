@@ -63,7 +63,12 @@
             <a href="#why-us" class="nav-2">Statistik</a>
             <a href="#testimonials" class="nav-2">Kegiatan</a>
             <a href="#about" class="nav-2">Umkm</a>
+            @if(!auth()->user())
             <a href="{{ url('http://127.0.0.1:8000/admin/login') }}" class="nav-2">Login</a>
+            @else
+            <a href="{{ url('http://127.0.0.1:8000/admin/login') }}" class="nav-2">Admin</a>
+            @endif
+
           </nav><!-- .main-nav -->
         </div>
       </header><!-- #header -->

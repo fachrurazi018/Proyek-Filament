@@ -75,7 +75,6 @@
             ============================-->
             <section id="why-us" class="wow fadeIn">
                 <div class="container" style="padding-top: 50px;">
-                    @foreach ($umkm as $umkm)
                     <header class="section-header">
                         <br>
                         <br>
@@ -84,7 +83,6 @@
                             , yakni {{$umkm->produk_unggulan}}. 
                             Jika berminat pada barang atau jasa yang ditawarkan, dapat menghubungi media sosial {{$umkm->nama_usaha}}, yaitu {{ $umkm->media_promosi }} </p>
                         </header>
-                        @endforeach
                     </div>
                 </section>
                 
@@ -99,11 +97,10 @@
                                 <p>Daftar produk unggulan dari UMKM {{$umkm->nama_usaha}} adalah </p>
                             </header>
                             
-                            @if($umkm !== null)
                             <div class="row portfolio-container">
                                 <div class="col-12 portfolio-item">
                                     <div class="portfolio-wrap" style="text-align: center;">
-                                        <img src="{{ asset('storage/'.$umkm->gambar) }}" class="img-fluid" alt="">
+                                        <img src="{{ asset('storage/'.$umkm->gambar) }}" height="400px" width="400px" class="img-fluid" alt="">
                                         <div class="portfolio-info">
                                             <h4 style="color: white;">{{$umkm->produk_unggulan}}</h4>
                                             <div>
@@ -113,9 +110,6 @@
                                     </div>
                                 </div>
                             </div>
-                            @else
-                            <p>Tidak ada data yang ditampilkan.</p>
-                            @endif
                             
                         </div>
                     </section><!-- #portfolio (Produk Unggulan) -->
