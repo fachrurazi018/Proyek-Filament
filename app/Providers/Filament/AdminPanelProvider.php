@@ -32,6 +32,11 @@ class AdminPanelProvider extends PanelProvider
                 'secondary' => '#3498db', // Warna aksen yang sedikit lebih terang
                 'background' => '#f5f5f5', // Warna latar belakang yang bersih
                 'text' => '#2c3e50', // Warna teks yang lebih gelap untuk kontras
+                'accent1' => '#e74c3c', // Merah cerah sebagai aksen tambahan
+                'accent2' => '#27ae60', // Hijau cerah untuk variasi
+                'accent3' => '#9b59b6', // Ungu cerah untuk kontras
+                'darkBackground' => '#34495e', // Latar belakang gelap untuk variasi
+                'lightText' => '#ecf0f1',
             ])
             ->discoverResources(in: app_path('Filament/Resources'), for: 'App\\Filament\\Resources')
             ->discoverPages(in: app_path('Filament/Pages'), for: 'App\\Filament\\Pages')
@@ -41,7 +46,6 @@ class AdminPanelProvider extends PanelProvider
             ->discoverWidgets(in: app_path('Filament/Widgets'), for: 'App\\Filament\\Widgets')
             ->widgets([
                 Widgets\AccountWidget::class,
-                Widgets\FilamentInfoWidget::class,
             ])
             ->middleware([
                 EncryptCookies::class,

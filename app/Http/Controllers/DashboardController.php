@@ -12,7 +12,7 @@ class DashboardController extends Controller
     public function index(){
         $pemiliks = PemilikUmkm::get();
         $umkm = Umkm::get();
-        $kegiatan = Kegiatan::get();
+        $kegiatan = Kegiatan::with('umkm')->get();
         return view('user.dashboard',compact('pemiliks','umkm','kegiatan'));
     }  
 

@@ -57,6 +57,7 @@
                             <img src="{{ asset('storage/'.$dokumentasi->gambar) }}" class="img-fluid mx-auto d-block" alt="">
                             <div class="text-center">
                                 <h4><b>{{ $dokumentasi->nama_kegiatan }}</b></h4>
+                                <h5>Yang diselenggarakan oleh {{ $dokumentasi->umkm->nama_usaha }}</h5>
                                 <p>{{ $dokumentasi->deskripsi }}</p>
                             </div>
                         </div>
